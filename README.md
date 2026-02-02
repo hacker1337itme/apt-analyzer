@@ -589,3 +589,15 @@ sudo tcpdump -i eth0 -c 10
 ```
 
 This configuration provides a comprehensive setup for monitoring network traffic for APT indicators with real-time alerts, web interface, and Prometheus metrics.
+You can custom it by edit config.yaml 
+
+Run the analyzer with a different Web UI port by modifying the start command:
+
+# Stop any existing service
+```
+sudo systemctl stop apt-analyzer
+```
+# Run manually 
+```
+sudo ./apt-analyzer --interface any --config /etc/apt-analyzer/config.yaml
+```
